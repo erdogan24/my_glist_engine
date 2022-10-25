@@ -149,9 +149,11 @@ void GameCanvas::updateLoad(int index) {
 			loadingtext[1] = "GUI/dialogbox1.png";
 			break;
 		case 8:
+			img_sagust.loadImage("GUI/Untitled1.png");
 
-			loadingtext[1] = "Setting up all initial variables...";
+			loadingtext[1] = "GUI/Untitled1.png";
 			break;
+
 		case 9:
 			loadingtext[1] = "Setting up all initial variables...";
 			setInitialVariables();
@@ -183,10 +185,10 @@ void GameCanvas::setInitialVariables() {
 	propXs[SHOP_ARMORY] = propXs[SHOP_ARMORY] - img_buildings[SHOP_ARMORY].getWidth()/2 - 150;
 	propYs[SHOP_ARMORY] = 250;
 
-	// ERDOGAN
-	// cizdirecegin gorsellerin koordinatlarini burada ata
-	//imagex, imagey
-	//getWidth() - testimg.getWidth()
+
+	img_sagustx = getWidth() - img_sagust.getWidth();
+	img_solusty = img_solust;
+
 
 	createButton("PAUSED", img_pouseMenux, img_pouseMenuy, 4, 255, 0, 0, font_POUSE);
 
@@ -254,8 +256,8 @@ void GameCanvas::drawMapFG() {
 
 void GameCanvas::drawGUI() {
 
-	// ERDOGAN
-	//img_testimage.draw(testimagex, testimagey, globalscale);
+
+	img_sagust.draw(img_sagustx, img_solusty, globalscale);
 
 }
 

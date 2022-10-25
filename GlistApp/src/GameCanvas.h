@@ -90,6 +90,9 @@ private:
 	gImage img_interior[buildingAmount][maxInteriorAmount]; //[buildingAmount][max(interiorAmounts)]
 	gImage img_NPCs[NPCAmount];
 	gImage img_pouseMenu;
+	gImage img_sagust;
+	gImage img_solust;
+
 	int propXs[propAmount + buildingAmount];
 	int propYs[propAmount + buildingAmount];
 
@@ -110,7 +113,9 @@ private:
 	int camx, camy, zoom;
 	int cx, cy, crot, cdx, cdy;
 	int img_pouseMenux , img_pouseMenuy;
+	int img_sagustx, img_solusty;
 	bool isPaused;
+
 };
 
 #endif /* GAMECANVAS_H_ */
