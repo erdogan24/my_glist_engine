@@ -113,7 +113,8 @@ private:
 	int camx, camy, zoom;
 	int cx, cy, crot, cdx, cdy;
 	int img_pouseMenux , img_pouseMenuy;
-	int img_sagustx, img_solusty;
+	int img_solustx, img_solusty;
+	int img_sagustx, img_sagusty;
 	bool isPaused;
 
 };

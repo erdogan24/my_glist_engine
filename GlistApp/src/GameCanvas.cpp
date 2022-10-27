@@ -149,13 +149,15 @@ void GameCanvas::updateLoad(int index) {
 			loadingtext[1] = "GUI/dialogbox1.png";
 			break;
 		case 8:
-			img_sagust.loadImage("GUI/Untitled1.png");
+			img_sagust.loadImage("GUI/Untitled1.jpeg");
 
-			loadingtext[1] = "GUI/Untitled1.png";
+			loadingtext[1] = "GUI/Untitled1.jpeg";
 			break;
 
 		case 9:
-			loadingtext[1] = "Setting up all initial variables...";
+			img_solust.loadImage("GUI/Untitled2.jpg");
+
+			loadingtext[1] = "GUI/Untitled2.jpg";
 			setInitialVariables();
 			break;
 		case 100:
@@ -186,8 +188,8 @@ void GameCanvas::setInitialVariables() {
 	propYs[SHOP_ARMORY] = 250;
 
 
-	img_sagustx = getWidth() - img_sagust.getWidth();
-	img_solusty = img_solust;
+	img_sagustx = 0;
+	img_solusty = getWidth() - img_sagust.getWidth();
 
 
 	createButton("PAUSED", img_pouseMenux, img_pouseMenuy, 4, 255, 0, 0, font_POUSE);
@@ -257,7 +259,11 @@ void GameCanvas::drawMapFG() {
 void GameCanvas::drawGUI() {
 
 
-	img_sagust.draw(img_sagustx, img_solusty, globalscale);
+	img_sagust.draw(img_sagustx, img_sagusty, globalscale);
+	img_sagust.draw(img_solustx, img_solusty, globalscale);
+
+	img_solust.draw(img_sagustx, img_sagusty, globalscale);
+	img_solust.draw(img_solustx, img_solusty, globalscale);
 
 }
 
